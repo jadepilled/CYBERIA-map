@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
 :root {
   --bg: #2a1d14;
   --panel: rgba(51, 37, 26, 0.94);
@@ -16,7 +21,8 @@
 
   --head: "Pixelify Sans", "Silkscreen", ui-monospace, monospace;
   --pix: "Silkscreen", "Pixelify Sans", ui-monospace, monospace;
-  --body: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --body: "VT323", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --vcr: "VCR OSD Mono", "Silkscreen", ui-monospace, monospace;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --panel-solid: #33251a;
   --top-h: 56px;
@@ -27,7 +33,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 [hidden] { display: none !important; }
 html, body { height: 100%; }
-body { background: var(--bg); color: var(--text); font: 400 0.95rem/1.45 var(--body); -webkit-font-smoothing: antialiased; overflow: hidden; }
+body { background: var(--bg); color: var(--text); font: 400 1.2rem/1.35 var(--body); -webkit-font-smoothing: antialiased; overflow: hidden; }
 button, input, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
 a { color: var(--white); text-underline-offset: 3px; text-decoration-color: var(--line-hi); }
@@ -43,7 +49,7 @@ kbd { font-family: var(--mono); font-size: 0.75rem; }
   display: flex; align-items: center; gap: 2rem; padding: 0 var(--gutter);
   background: rgba(42, 29, 20, 0.88); backdrop-filter: blur(8px); border-bottom: 2px solid var(--line);
 }
-.logo { font: 700 1.05rem/1 var(--pix); color: var(--white); text-decoration: none; white-space: nowrap; }
+.logo { font: 400 1.25rem/1 var(--vcr); color: var(--white); text-decoration: none; white-space: nowrap; }
 .logo em { font: 400 0.55rem var(--pix); font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); margin-left: 0.6rem; vertical-align: 0.25em; }
 .nav nav { display: flex; gap: 1.6rem; margin-left: auto; }
 .nav nav a { font-family: var(--pix); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--grey); transition: color 0.15s; }
@@ -60,7 +66,7 @@ kbd { font-family: var(--mono); font-size: 0.75rem; }
   width: 100%; height: 38px; padding: 0 2.2rem 0 0.9rem;
   background: var(--panel-solid); color: var(--white);
   border: 2px solid var(--line); border-radius: 0;
-  font: 400 0.9rem var(--body);
+  font: 400 1.15rem var(--body);
 }
 .search input::placeholder { color: var(--muted); }
 .search input:focus { outline: none; border-color: var(--accent); }
@@ -273,7 +279,7 @@ button.chip[aria-pressed="false"] .sw { background: none !important; box-shadow:
 
 /* CYBERIA wordmark: copper to cream, with a quick prismatic sweep now and then */
 .cy {
-  position: relative; display: inline-block; font-family: var(--pix); font-weight: 700; letter-spacing: 0.16em; text-indent: 0;
+  position: relative; display: inline-block; font-family: var(--vcr); font-weight: 400; letter-spacing: 0.18em; text-indent: 0;
   background: linear-gradient(90deg, var(--copper) 0%, #d9a773 38%, var(--accent-hi) 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -294,3 +300,21 @@ button.chip[aria-pressed="false"] .sw { background: none !important; box-shadow:
 
 /* Pixelify Sans ships odd fi/fl ligatures */
 h1, h2, h3, .cy, .logo, .wordmark, .srv-map, .stat dd, .card h3, .pop h4, .tile h2, .panel h2, .facts dd { font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; }
+
+/* VT323 runs small for its em: lift the body-font sizes */
+.chip { font-size: 1rem; }
+.chip b { font-size: 0.9rem; }
+.row .n { font-size: 1rem; }
+.tier-key { font-size: 1rem; }
+.hint-line, .link { font-size: 1rem; }
+.credit { font-size: 0.95rem; }
+.pop .kv, .pop .list ul { font-size: 1.1rem; }
+.pop .list li small { font-size: 1rem; }
+.wiki-link { font-size: 1.1rem; }
+.del { font-size: 1.05rem; }
+.leaflet-tooltip { font: 400 1.05rem var(--body); }
+.leaflet-tooltip.place { font: 400 1rem var(--body); letter-spacing: 0.04em; }
+.map-label { font: 400 1rem var(--body) !important; }
+.scalebar b { font: 400 0.95rem var(--body); }
+.toast { font-size: 1.1rem; }
+.ctx-head span { font-size: 1.1rem; }
