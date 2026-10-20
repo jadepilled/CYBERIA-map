@@ -19,7 +19,7 @@
   --chart: #e3cfa8;
   --ok: #9ccf6e;
 
-  --head: "Pixelify Sans", "Silkscreen", ui-monospace, monospace;
+  --head: "VT323", "IBM Plex Mono", ui-monospace, monospace;
   --pix: "Silkscreen", "Pixelify Sans", ui-monospace, monospace;
   --body: "VT323", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --vcr: "VCR OSD Mono", "Silkscreen", ui-monospace, monospace;
@@ -99,8 +99,8 @@ body.tool-active #map { cursor: crosshair; }
 .leaflet-popup-close-button { color: var(--grey) !important; }
 .leaflet-container a.leaflet-popup-close-button:hover { color: var(--white) !important; }
 .leaflet-tooltip.place { background: none; border: 0; padding: 0; color: var(--white); text-shadow: 0 1px 2px #140d08, 0 0 8px #140d08, 0 0 2px #140d08; font: 600 0.8rem var(--body); letter-spacing: 0.04em; white-space: nowrap; }
-.leaflet-tooltip.place.r0 { font: 900 1.05rem var(--head); letter-spacing: 0.02em; }
-.leaflet-tooltip.place.r1 { font: 800 0.92rem var(--head); }
+.leaflet-tooltip.place.r0 { font: 400 1.35rem var(--head); letter-spacing: 0.08em; text-transform: uppercase; }
+.leaflet-tooltip.place.r1 { font: 400 1.15rem var(--head); letter-spacing: 0.06em; text-transform: uppercase; }
 .leaflet-tooltip.place.r3 { color: rgba(246, 234, 213, 0.7); font-weight: 500; font-size: 0.74rem; }
 #map.hide-r0 .place.r0, #map.hide-r1 .place.r1, #map.hide-r2 .place.r2, #map.hide-r3 .place.r3 { display: none; }
 .leaflet-tooltip.tier-label { background: rgba(24, 16, 9, 0.88); border: 1px solid var(--line-hi); color: var(--white); font: 600 0.72rem var(--body); letter-spacing: 0.12em; text-transform: uppercase; padding: 0.05rem 0.4rem; pointer-events: none; }
@@ -185,7 +185,7 @@ button.chip[aria-pressed="false"] .sw { background: none !important; box-shadow:
 /* Lookup card */
 .card { background: var(--raise); padding: 0.85rem 0.9rem; border-bottom: 1px solid var(--line); }
 .card-head { display: flex; align-items: flex-start; gap: 0.5rem; }
-.card h3 { font: 800 1.15rem/1.2 var(--head); color: var(--white); flex: 1; }
+.card h3 { font: 400 1.5rem/1.15 var(--head); color: var(--white); flex: 1; }
 .card .x { background: none; border: 0; color: var(--grey); padding: 0.1rem; }
 .card .x:hover { color: var(--white); }
 .classes { display: flex; flex-wrap: wrap; gap: 2px 8px; margin-top: 0.2rem; }
@@ -196,11 +196,11 @@ button.chip[aria-pressed="false"] .sw { background: none !important; box-shadow:
 .facts { display: grid; grid-template-columns: 1fr 1fr; margin-top: 0.6rem; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .facts div { padding: 0.4rem 0.55rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); min-width: 0; }
 .facts dt { font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey); }
-.facts dd { font: 800 1.02rem/1.25 var(--head); color: var(--white); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.facts dd { font: 400 1.3rem/1.2 var(--head); color: var(--white); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .wiki-link { display: inline-block; margin-top: 0.6rem; font-size: 0.85rem; }
 
 /* Popup content */
-.pop h4 { font: 800 1rem/1.2 var(--head); color: var(--white); display: flex; align-items: center; gap: 0.45rem; padding-right: 1rem; }
+.pop h4 { font: 400 1.35rem/1.15 var(--head); color: var(--white); display: flex; align-items: center; gap: 0.45rem; padding-right: 1rem; }
 .pop > .cls { display: block; margin-top: 0.15rem; }
 .pop .sub { color: var(--muted); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem; }
 .pop .kv { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.8rem; margin-top: 0.55rem; font-size: 0.88rem; }
@@ -267,7 +267,7 @@ button.chip[aria-pressed="false"] .sw { background: none !important; box-shadow:
 .panel h2 { font: 400 0.58rem var(--pix); letter-spacing: 0.12em; }
 .panel h2::before { height: 3px; background: var(--accent); }
 .facts dt, .pop .sub, .leaflet-tooltip.tier-label, .panel-toggle { font-family: var(--pix); font-size: 0.55rem; letter-spacing: 0.1em; }
-.card h3, .pop h4 { font-weight: 700; }
+.card h3, .pop h4 { font-weight: 400; }
 .panel { border-width: 2px; }
 .pick select, .seg, .tog, .tools button, .leaflet-control-zoom { border-width: 2px !important; }
 .seg button[aria-pressed="true"], .tog[aria-pressed="true"] { box-shadow: inset 0 -3px 0 var(--accent); }
@@ -330,3 +330,10 @@ h1, h2, h3, .cy, .logo, .wordmark, .srv-map, .stat dd, .card h3, .pop h4, .tile 
 .scalebar b { font: 400 0.95rem var(--body); }
 .toast { font-size: 1.1rem; }
 .ctx-head span { font-size: 1.1rem; }
+
+/* Search groups and wiki-linked titles */
+#results .grp { padding: 0.45rem 0.9rem 0.1rem; font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); cursor: default; }
+#results .grp:not(:first-child) { border-top: 1px solid var(--line); margin-top: 0.2rem; }
+.pop h4 a.wl, .pop h3 a.wl { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--grey); text-underline-offset: 3px; }
+.pop h4 a.wl:hover, .pop h3 a.wl:hover { text-decoration-style: solid; text-decoration-color: var(--accent); }
+.leaflet-tooltip.place { pointer-events: auto; cursor: pointer; }
