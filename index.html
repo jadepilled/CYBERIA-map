@@ -6,7 +6,8 @@
   <title>CYBERIA Map</title>
   <meta name="description" content="Interactive loot, spawn and vehicle map for CYBERIA servers.">
   <meta name="theme-color" content="#181009">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.gif" type="image/gif">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
@@ -16,10 +17,11 @@
   <script src="icons.js" defer></script>
   <script src="app.js" defer></script>
   <script src="countdown.js" defer></script>
+  <script src="light.js" defer></script>
 </head>
 <body>
   <header class="nav">
-    <a href="https://cyberia.gg" class="logo" aria-label="CYBERIA home"><span class="cy" data-text="CYBERIA">CYBERIA</span><em>Map</em></a>
+    <a href="https://cyberia.gg" class="logo" aria-label="CYBERIA home"><span class="cy" data-text="CYBERIA" data-light>CYBERIA</span><em>Map</em></a>
     <a class="count" href="https://cyberia.gg/#play" hidden><span>Release</span><time id="countdown" datetime="2026-11-01T07:00:00Z">--</time></a>
     <div class="search" role="search">
       <input id="q" type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search items, buildings, vehicles and places" aria-controls="results">
